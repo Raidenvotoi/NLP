@@ -18,7 +18,8 @@ menu_items = [
     ]),
     sac.MenuItem('Hệ thống chatbot', icon='robot', children=[
         sac.MenuItem('Hệ thống chatbot agent', icon='robot-2'),
-        sac.MenuItem('Hệ thống chatbot tạo sinh', icon='robot-2')
+        sac.MenuItem('Hệ thống chatbot tạo sinh', icon='robot-2'),
+        sac.MenuItem('Hệ thống chatbot SentenceTransformer', icon='robot-2')
     ]),
 ]
 
@@ -31,6 +32,7 @@ page_he_thong_goi_y_dua_tren_danh_gia_noi_dung = st.Page('goiyduatrendanhgianoid
 page_he_thong_goi_y_dua_tren_ngu_canh= st.Page('goiycongtac.py', title='Hệ thống gợi ý dựa trên nội dung')
 page_chatbot_agent = st.Page('chatbox_agent.py', title='Hệ thống chatbot agent')
 page_chatbot_generative = st.Page('HeThongChatBotAPI.py', title='Hệ thống chatbot tạo sinh')
+page_chatbot_local = st.Page('chatbox_local.py', title='Hệ thống chatbot SentenceTransformer')
 
 # (4) Chèn menu vào sidebar và lấy key được chọn
 with st.sidebar:
@@ -57,3 +59,5 @@ elif selected == 'Hệ thống chatbot agent':
     st.navigation([page_chatbot_agent]).run()
 elif selected == 'Hệ thống chatbot tạo sinh':
     st.navigation([page_chatbot_generative]).run()
+elif selected == 'Hệ thống chatbot SentenceTransformer':
+    st.navigation([page_chatbot_local]).run()

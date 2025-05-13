@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Thiết lập Streamlit
-st.set_page_config(page_title="Hệ thống gợi ý phim dựa trên Item-Based Collaborative Filtering", page_icon=":movie_camera:", layout="wide")
+# st.set_page_config(page_title="Hệ thống gợi ý phim dựa trên Item-Based Collaborative Filtering", page_icon=":movie_camera:", layout="wide")
 st.title("Hệ thống gợi ý phim dựa trên Item-Based Collaborative Filtering")
 st.markdown("Chọn một User ID để xem ma trận đánh giá và nhận gợi ý phim dựa trên độ tương đồng giữa các phim!")
 import kagglehub

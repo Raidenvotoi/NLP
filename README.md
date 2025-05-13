@@ -33,6 +33,9 @@ Hệ thống chatbot bao gồm:
 - **Chatbot tạo sinh**:
   - Chatbot sử dụng mô hình GPT-3.5 để trả lời câu hỏi của người dùng.
   - **File liên quan**: [`HeThongChatBotAPI.py`](HeThongChatBotAPI.py)
+- **Chatbot dựa trên SentenceTransformer**:
+  - Chatbot sử dụng mô hình SentenceTransformer để tìm câu trả lời phù hợp nhất từ tập dữ liệu câu hỏi và câu trả lời.
+  - **File liên quan**: [`chatbox_local.py`](chatbox_local.py)
 
 ### 4. **Giao diện điều hướng**
 - Giao diện điều hướng chính của dự án, cho phép người dùng truy cập các tính năng khác nhau thông qua menu.
@@ -44,7 +47,7 @@ Hệ thống chatbot bao gồm:
      ```bash
      pip install -r requirements.txt
      ```
-   - Một số thư viện chính bao gồm: [streamlit](http://_vscodecontentref_/0), `scikit-learn`, [pandas](http://_vscodecontentref_/1), [numpy](http://_vscodecontentref_/2), [nltk](http://_vscodecontentref_/3), [transformers](http://_vscodecontentref_/4), [kagglehub](http://_vscodecontentref_/5), `deep-translator`, v.v.
+   - Một số thư viện chính bao gồm: [streamlit](http://_vscodecontentref_/0), `scikit-learn`, [pandas](http://_vscodecontentref_/1), [numpy](http://_vscodecontentref_/2), `nltk`, `transformers`, `sentence-transformers`, `deep-translator`, `torch`, `spacy`, [kagglehub](http://_vscodecontentref_/3), v.v.
 
 2. **Chạy ứng dụng**:
    - Sử dụng lệnh sau để chạy ứng dụng Streamlit:
@@ -58,9 +61,10 @@ Hệ thống chatbot bao gồm:
 ## Tính năng nổi bật
 - **Gán nhãn dữ liệu**: Hỗ trợ các bước xử lý dữ liệu từ thô đến phân loại.
 - **Hệ thống gợi ý**: Cung cấp nhiều phương pháp gợi ý dựa trên nội dung, đánh giá người dùng, và ngữ cảnh.
-- **Chatbot**: Tích hợp chatbot thông minh sử dụng mô hình GPT-3.5.
+- **Chatbot**:
+  - Chatbot tạo sinh thông minh sử dụng mô hình GPT-3.5.
+  - Chatbot dựa trên SentenceTransformer để tìm kiếm câu trả lời từ tập dữ liệu.
 - **Giao diện thân thiện**: Sử dụng Streamlit để tạo giao diện người dùng dễ sử dụng.
 
 ## Đóng góp
 Nếu bạn muốn đóng góp cho dự án, vui lòng tạo một pull request hoặc mở issue trên GitHub.
-

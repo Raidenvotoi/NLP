@@ -15,7 +15,7 @@ from random import randint
 import kagglehub
 
 # Thiết lập Streamlit
-st.set_page_config(page_title="Hệ thống gợi ý địa điểm theo ngữ cảnh", page_icon=":world_map:", layout="wide")
+# st.set_page_config(page_title="Hệ thống gợi ý địa điểm theo ngữ cảnh", page_icon=":world_map:", layout="wide")
 st.title("Hệ thống gợi ý địa điểm theo ngữ cảnh")
 st.markdown("Chọn một User ID để nhận gợi ý địa điểm dựa trên sở thích, thời tiết, mùa và thời gian trong ngày!")
 
