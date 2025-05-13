@@ -3,15 +3,16 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer, util
 model = SentenceTransformer('all-MiniLM-L6-v2')
 import kagglehub
-
+import requests
 # Download latest version
 path = kagglehub.dataset_download("huhuyngun/vietnamese-chatbot-ver2")
-
+url = "https://drive.usercontent.google.com/download?id=1L7SQeLfN54npSq1sB-T0zLBAtu13LrST&export=download&authuser=0&confirm=t&uuid=f32337bd-931d-4507-bca0-07f7bb7bcd30&at=ALoNOgmiSmgsaRMGGztr8pHp3MRg%3A1747156022812"
+response = requests.get(url)
+response.raise_for_status()
 print("Path to dataset files:", path)
 
 qa_dataset=pd.read_csv(path+"/vi-QA.csv")
-with open('data\question_embeddings.pkl', 'rb') as f:
-       question_embeddings = pickle.load(f)
+question_embeddings = pickle.loads(response.content)
 user_question = "Có crush ai không	"
 user_embedding = model.encode(user_question)
 import numpy as np
