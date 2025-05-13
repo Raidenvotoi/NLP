@@ -194,12 +194,15 @@ def clean_text(text):
 
         text = ".".join(rejoined_text)
     return text
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 
 def crawl_text(limit, subreddit):
-    client_id = "f8iP36GNmZPRxNJbvGJ3MQ"
-    client_secret = "lblLs5SoJ8ef9NhuxtPtpo83hIMXmg"
-    user_agent = "huhu"
+    client_id = os.getenv("CLIENT_ID")
+    client_secret = os.getenv("CLIENT_SECRET")
+    user_agent = os.getenv("USER_AGENT")
     reddit = praw.Reddit(
         client_id=client_id,
         client_secret=client_secret,

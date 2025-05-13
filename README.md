@@ -64,6 +64,3 @@ Hệ thống chatbot bao gồm:
 ## Đóng góp
 Nếu bạn muốn đóng góp cho dự án, vui lòng tạo một pull request hoặc mở issue trên GitHub.
 
-## Liên hệ
-- **Tác giả**: [Tên của bạn]
-- **Email**: [Email của bạn]
