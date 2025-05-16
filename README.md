@@ -3,6 +3,19 @@
 ## Giới thiệu
 Dự án này là một hệ thống xử lý ngôn ngữ tự nhiên (NLP) đa chức năng, được xây dựng bằng Python và Streamlit. Hệ thống cung cấp các công cụ và ứng dụng liên quan đến NLP, bao gồm gán nhãn dữ liệu, hệ thống gợi ý, chatbot, và nhiều tính năng khác.
 
+## Yêu cầu hệ thống
+
+- **Python**: Phiên bản 3.8 trở lên.
+- **Các biến môi trường**: Cần thiết lập các biến môi trường trong file `.env` dựa trên mẫu `env.example` để cấu hình các thông tin như API key, client ID, v.v.
+
+## Thiết lập biến môi trường
+
+1. Sao chép file mẫu:
+   ```bash
+   copy env.example .env
+   ```
+2. Mở file `.env` và điền các thông tin cấu hình phù hợp với hệ thống của bạn.
+
 ## Cấu trúc dự án
 Dự án bao gồm các thành phần chính sau:
 
@@ -43,11 +56,12 @@ Hệ thống chatbot bao gồm:
 
 ## Cách chạy dự án
 1. **Cài đặt các thư viện cần thiết**:
+   - Đảm bảo đã cài đặt Python và thiết lập biến môi trường như hướng dẫn ở trên.
    - Sử dụng `pip` để cài đặt các thư viện trong dự án:
      ```bash
      pip install -r requirements.txt
      ```
-   - Một số thư viện chính bao gồm: [streamlit](http://_vscodecontentref_/0), `scikit-learn`, [pandas](http://_vscodecontentref_/1), [numpy](http://_vscodecontentref_/2), `nltk`, `transformers`, `sentence-transformers`, `deep-translator`, `torch`, `spacy`, [kagglehub](http://_vscodecontentref_/3), v.v.
+   - Một số thư viện chính bao gồm: `streamlit`, `scikit-learn`, `pandas`, `numpy`, `nltk`, `transformers`, `sentence-transformers`, `deep-translator`, `torch`, `spacy`, `kagglehub`, v.v.
 
 2. **Chạy ứng dụng**:
    - Sử dụng lệnh sau để chạy ứng dụng Streamlit:

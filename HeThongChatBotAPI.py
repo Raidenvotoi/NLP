@@ -1,25 +1,26 @@
 import streamlit as st
-
 import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Load environment variables from .env
+
 st.title("Hệ thống chatbot tạo sinh")
+
 def get_answer(user):
+    api_key = os.getenv("AIML_API_KEY")
     response = requests.post(
         "https://api.aimlapi.com/v1/chat/completions",
         headers={
-            "Content-Type":"application/json", 
-
-            # Insert your AIML API Key instead of <YOUR_AIMLAPI_KEY>:
-            "Authorization":"Bearer 1009d86d0cbd4085a2f157732c2b2dd7",
-            "Content-Type":"application/json"
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {api_key}"
         },
         json={
-            "model":"gpt-3.5-turbo",
-            "messages":[
+            "model": "gpt-3.5-turbo",
+            "messages": [
                 {
-                    "role":"user",
-
-                    # Insert your question for the model here, instead of Hello:
-                    "content":f"{user}"
+                    "role": "user",
+                    "content": f"{user}"
                 }
             ]
         }
@@ -27,6 +28,8 @@ def get_answer(user):
 
     data = response.json()
     return data['choices'][0]['message']['content']
+
+
 
 
 
