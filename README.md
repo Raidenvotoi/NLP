@@ -3,6 +3,10 @@
 ## Giới thiệu
 Dự án này là một hệ thống xử lý ngôn ngữ tự nhiên (NLP) đa chức năng, được xây dựng bằng Python và Streamlit. Hệ thống cung cấp các công cụ và ứng dụng liên quan đến NLP, bao gồm gán nhãn dữ liệu, hệ thống gợi ý, chatbot, và nhiều tính năng khác.
 
+## Demo
+[![Demo Video](https://img.youtube.com/vi/ZM68c_O6b5U/0.jpg)](https://www.youtube.com/watch?v=ZM68c_O6b5U)
+- Xem video demo tại: [https://www.youtube.com/watch?v=ZM68c_O6b5U](https://www.youtube.com/watch?v=ZM68c_O6b5U)
+
 ## Yêu cầu hệ thống
 
 - **Python**: Phiên bản 3.8 trở lên.
